@@ -1,0 +1,11 @@
+*.lock
+*-lock.json
+node_modules/
+.*.sw[p-z]
+.bin/
+coverage/
+.idea/
+package-lock.json
+yarn-error.log
+.scannerwork/
+*.orig

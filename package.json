@@ -1,0 +1,30 @@
+{
+  "name": "mender-cli",
+  "version": "0.0.1",
+  "description": "mender command line tool",
+  "main": "index.js",
+  "author": "Andrew Chen <yongjhih@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "jest": "20.0.4",
+    "nock": "^9.1.6",
+    "sonar-scanner": "^3.0.3",
+    "swagger-codegen-axios-flow": "^0.0.8"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "fs-extra": "^7.0.0",
+    "mender": "^0.0.2",
+    "yargs": "^12.0.2"
+  },
+  "bin": {
+    "mender": "index.js"
+  }
+}
