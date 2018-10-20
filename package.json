@@ -1,0 +1,46 @@
+{
+  "name": "mender-cli",
+  "version": "0.0.0",
+  "author": "Andrew Chen @yongjhih",
+  "bin": {
+    "mender": "./bin/run"
+  },
+  "bugs": "https://github.com/yongjhih/mender-cli.js/issues",
+  "dependencies": {
+    "@oclif/command": "^1",
+    "@oclif/config": "^1",
+    "@oclif/plugin-help": "^2",
+    "globby": "^8.0.1"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "files": [
+    "/bin",
+    "/npm-shrinkwrap.json",
+    "/oclif.manifest.json",
+    "/src"
+  ],
+  "homepage": "https://github.com/yongjhih/mender-cli.js",
+  "keywords": [
+    "oclif"
+  ],
+  "license": "MIT",
+  "main": "src/index.js",
+  "oclif": {
+    "commands": "./src/commands",
+    "bin": "mender",
+    "plugins": [
+      "@oclif/plugin-help"
+    ]
+  },
+  "repository": "yongjhih/mender-cli",
+  "scripts": {
+    "postpack": "rm -f oclif.manifest.json",
+    "posttest": "eslint .",
+    "prepack": "oclif-dev manifest && oclif-dev readme",
+    "test": "nyc mocha --forbid-only \"test/**/*.test.js\"",
+    "version": "oclif-dev readme && git add README.md"
+  }
+}
